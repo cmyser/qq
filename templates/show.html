@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <form class="form-inline my-2 my-lg-0" >
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name = "search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    
+
+   
+            <th>Username</th>
+            <th>Title</th>
+            <th>Text of post</th>
+          
+            
+            
+
+
+            <style type="text/css">
+                #title1, #title2, #title3, #col1, #col2, #col3 { /* 1 */
+                font-family: Verdana, Arial, sans-serif;
+                font-weight: bold;
+                font-size: 80%;
+                color: white;
+                width: 150px;
+                padding: 5px;
+                border: 1px solid black;
+                margin-left: 5px;
+                margin-top: 2px;
+                float: left;
+                }
+                #col1, #col2, #col3 { /* 2 */
+                font-family: "Times New Roman", Times, serif;
+                font-size: 100%;
+                font-weight: normal;
+                color: black;
+                }
+                #title1 { background: #72B626; }
+                #title2 { background: #72B626; }
+                #title3 { background: #72B626; }
+                #col1 { background: #FFFFFF; }
+                #col2 { background: #FFFFFF; }
+                #col3 { background: #FFFFFF; } .tr { /* 3 */
+                clear: both;
+                }
+                </style>
+                <div class="tr">
+                <div id="title1">
+                Username</div>
+                <div id="title2">
+                Title</div>
+                <div id="title3">
+                Text</div>
+                </div>
+                <div class="tr">
+                <div id="col1">
+                    {% for n in user %}
+          
+            
+                    <h1>{{n.username}}</h1>
+                    <h1>'           '</h1>
+                    
+                
+              
+                {% endfor %}
+            </div>
+                <div id="col2">
+                    {% for n in post %}
+          
+           
+                    {{n.title}}
+
+                    <h1>'           '</h1>
+                    
+                    
+                    {% endfor %}
+              
+                </div>
+                <div id="col3">
+                    {% for n in post %}
+          
+           
+                    {{n.body}}
+
+                    <h1>'           '</h1>
+
+                    {% endfor %}
+                </div>
+          
+          
+          
+</body>
+</html>
